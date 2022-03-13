@@ -31,6 +31,9 @@
 *.out
 *.app
 
+# text editor
+.vscode/
+
 # custom build
 build/
 main/build/
