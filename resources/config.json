@@ -1,0 +1,15 @@
+{
+    "dev": {
+      "host": "0.0.0.0",
+      "port": 8000,
+      "swaggerHost": "localhost:8000",
+      "dbConnectionString": "postgresql://admin@localhost:5432"
+    },
+    "local-docker": {
+      "host": "0.0.0.0",
+      "port": 8000,
+      "swaggerHost": "localhost:8000",
+      "dbConnectionString": "postgresql://postgres:db-pass@db:5432/postgres"
+    }
+  }
+  
