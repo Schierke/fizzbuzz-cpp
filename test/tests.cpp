@@ -1,5 +1,6 @@
 
 #include "oatpp-test/UnitTest.hpp"
+#include "FizzBuzzTest.hpp"
 #include <iostream>
 
 namespace {
@@ -11,7 +12,9 @@ public:
 
   void onRun() override {
     OATPP_LOGD(TAG, "Hello Test");
-    // TODO write correct  tests
+
+    FizzBuzzTest fb_component;
+    fb_component.runTests();
   }
 };
 

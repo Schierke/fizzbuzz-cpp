@@ -41,7 +41,6 @@ public:
            PATH(String, str2),
            PATH(UInt32, limit))
   {
-    // perform check type validation from the request:
     // createDtoResponse
     oatpp::Object<FizzBuzzDto> fbDto = FizzBuzzDto::createShared();
     fbDto->int1 = int1;

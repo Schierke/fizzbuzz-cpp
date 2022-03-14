@@ -19,28 +19,9 @@ class FizzBuzzDto : public oatpp::DTO {
   DTO_FIELD(UInt32, max_limit);
 
 public:
-  std::vector<std::string> computeFizzBuzz()  {
-    std::vector<std::string> ret;
-    std::string temp =  "";
-    for(int i = 1; i <= max_limit; i++) {
-      if(i % int1 == 0) {
-        temp += str1.getValue("");
-      } 
+  std::vector<std::string> computeFizzBuzz();
 
-      if(i % int2 == 0) {
-        temp += str2.getValue("");
-      } 
-
-      if(temp == "") {
-        temp = std::to_string(i);
-      }
-
-      ret.push_back(temp);
-      temp = "";
-    }
-
-    return ret;
-  }
+  std::string validate();
 };
 
 #include OATPP_CODEGEN_END(DTO)

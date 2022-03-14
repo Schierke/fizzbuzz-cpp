@@ -13,6 +13,7 @@ add_library(${project_name}-lib
         src/dto/PageDto.hpp
         src/dto/StatusDto.hpp
         src/dto/FizzBuzzDto.hpp
+        src/dto/FizzBuzzDto.cpp
         src/service/FizzBuzzService.cpp
         src/service/FizzBuzzService.hpp
         src/AppComponent.hpp
@@ -59,6 +60,7 @@ target_link_libraries(${project_name}-exe ${project_name}-lib)
 add_dependencies(${project_name}-exe ${project_name}-lib)
 
 add_executable(${project_name}-test
+        test/FizzBuzzTest.hpp
         test/tests.cpp
 )
 target_link_libraries(${project_name}-test ${project_name}-lib)
