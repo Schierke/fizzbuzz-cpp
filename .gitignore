@@ -32,7 +32,7 @@
 *.app
 
 # text editor
-.vscode/
+.vscode/*
 
 # custom build
 build/
