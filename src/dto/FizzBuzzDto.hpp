@@ -4,6 +4,7 @@
 #include <string>
 #include "oatpp/core/macro/codegen.hpp"
 #include "oatpp/core/Types.hpp"
+#include "oatpp/core/utils/ConversionUtils.hpp"
 
 #include OATPP_CODEGEN_BEGIN(DTO)
 
@@ -18,10 +19,10 @@ class FizzBuzzDto : public oatpp::DTO {
   DTO_FIELD(UInt32, max_limit);
 
 public:
-  std::string computeFizzBuzz()  {
-    std::string ret;
+  std::vector<std::string> computeFizzBuzz()  {
+    std::vector<std::string> ret;
+    std::string temp =  "";
     for(int i = 1; i <= max_limit; i++) {
-      std::string temp =  "";
       if(i % int1 == 0) {
         temp += str1.getValue("");
       } 
@@ -34,7 +35,8 @@ public:
         temp = std::to_string(i);
       }
 
-      ret += temp + ";";
+      ret.push_back(temp);
+      temp = "";
     }
 
     return ret;

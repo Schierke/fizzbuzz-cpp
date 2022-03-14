@@ -31,7 +31,7 @@ public:
   
   ENDPOINT_INFO(getFizzBuzz) {
     info->summary = "Create or update a FizzBuzz request";
-    info->addResponse<Object<StatusDto>>(Status::CODE_200, "application/json");
+    info->addResponse<Object<PageDto>>(Status::CODE_200, "application/json");
     info->addResponse<Object<StatusDto>>(Status::CODE_500, "application/json");
   }
   ENDPOINT("GET", "fizzbuzz/int1/{int1}/int2/{int2}/str1/{str1}/str2/{str2}/limit/{limit}", getFizzBuzz,

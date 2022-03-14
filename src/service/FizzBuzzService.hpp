@@ -16,7 +16,7 @@ private:
   OATPP_COMPONENT(std::shared_ptr<FizzBuzzDb>, m_database); // Inject database component
 public:
 
-  oatpp::Object<StatusDto> getFizzBuzz(const oatpp::Object<FizzBuzzDto>& dto);
+  oatpp::Object<PageDto> getFizzBuzz(const oatpp::Object<FizzBuzzDto>& dto);
   oatpp::Object<FizzBuzzDto> getStats();
 
 
